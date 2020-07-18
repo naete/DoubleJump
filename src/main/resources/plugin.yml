@@ -1,0 +1,5 @@
+main: io.github.naete.doublejump.Main
+name: DoubleJump
+description: Allows players to press space to double jump.
+author: Naete
+version: 1.0.0
