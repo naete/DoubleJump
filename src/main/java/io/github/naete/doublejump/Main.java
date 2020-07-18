@@ -5,11 +5,19 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 
-    PluginManager manger = getServer().getPluginManager();
+    public static Main plugin;
+
+    PluginManager manager = getServer().getPluginManager();
 
     @Override
     public void onEnable() {
-        manger.registerEvents(new EventHandlers(), this);
+
+        plugin = this;
+
+        // Events
+        manager.registerEvents(new EventHandlers(this), this);
+
+        this.saveDefaultConfig();
     }
 
 }
